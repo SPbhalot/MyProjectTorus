@@ -1,0 +1,17 @@
+<app-header class="welcome_header"></app-header>
+<div class="welcome_container">
+  <div class="show_items">
+    <h1 id="List-Tag">Crypto list</h1>
+   <ul class="list_items" *ngFor="let data of CurrencyApiCall()">
+    <li id="lisname"(click)='DisplayCurrencyDetails(data.CurrencyName)'>{{data.CurrencyName}}</li>
+  </ul>
+</div>
+</div>
+
+ 
+
+
+ 
+
+  
+

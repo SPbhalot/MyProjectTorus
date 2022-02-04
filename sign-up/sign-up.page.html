@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="Regi-container">
+      <form id="Regi-Form" [formGroup]="RegistrationForm" (ngSubmit)="SubmitForm()">
+        <div><img
+            src="https://st2.depositphotos.com/5142301/8014/v/950/depositphotos_80144464-stock-illustration-t-letter-logo-with-neon.jpg"
+            alt="" width="50px" height="50px"></div>
+        <h2 id="Regi-header">Sign up</h2>
+        <div id="Regi-names">
+          <div class="input-group-sign">
+            <input type="text" class="form-control-sign" placeholder="First Name" formControlName="firstname">
+            <div class="errorsGroups">
+              <span class='errormsg' *ngIf="f.firstname.invalid && !f.firstname.value && submitted">First name is
+                required</span>
+              <span class='errormsg' *ngIf="f.firstname.errors && f.firstname.errors.pattern">special characters are not
+                allowed</span>
+              <span class='errormsg' *ngIf="f.firstname.value && f.firstname.invalid">Minimum 3 char required</span>
+              <span class= "Successmsg" *ngIf="f.firstname.valid">Succesful</span>
+            </div>
+            <input type="text" class="form-control-sign" placeholder="Last Name" formControlName="lastname">
+            <div class="errorsGroups">
+              <span class='errormsg' *ngIf="f.lastname.invalid && !f.lastname.value && submitted">Last name is
+                required</span>
+                <span class='errormsg' *ngIf="f.lastname.errors && f.lastname.errors.pattern">special characters are not allowed</span>
+                <span class='errormsg' *ngIf="f.lastname.value && f.lastname.invalid">Minimum 3 char required</span>
+                <span class= "Successmsg" *ngIf="f.lastname.valid">Succesful</span>
+              </div>
+
+            
+
+          </div>
+        </div>
+        <div id="Regi-username">
+          <div class="input-group-sign">
+            <input type="text" class="form-control-sign" id="regi-form-user" placeholder="Username"
+              formControlName="username">
+
+            <div class="errorsGroups">
+              <span class='errormsg' *ngIf="f.username.invalid && !f.username.value && submitted">Username is
+                required</span>
+              <span class='errormsg' *ngIf="f.username.errors && f.username.errors.pattern">special characters are not
+                allowed</span>
+              <span class='errormsg' *ngIf="f.username.value && f.username.invalid">Minimum 3 char required</span>
+              <span class= "Successmsg" *ngIf="f.username.valid">Succesful</span>
+            
+            </div>
+
+          </div>
+        </div>
+        <div id="Regi-pass">
+          <div class="input-group-sign">
+            <input type="password" class="form-control-sign" placeholder="password" formControlName="password">
+            <div class="errorsGroups">
+              <span class='errormsg' *ngIf="f.password.invalid && !f.password.value &&  submitted">password is
+                required</span>
+              <span class='errormsg' *ngIf="f.password.value && f.password.invalid">Minimum 8 char required</span>
+              <span class= "Successmsg" *ngIf="f.password.valid">Succesful</span>
+            
+            </div>
+            <input type="password" class="form-control-sign" placeholder="Confirm password"
+              formControlName="confirmpassword">
+            <div class="errorsGroups">
+              <span class='errormsg' *ngIf="f.confirmpassword.invalid && !f.confirmpassword.value && submitted">Confirm
+                password is required</span>
+              <span class='errormsg' *ngIf="f.confirmpassword.value && f.confirmpassword.invalid">Password Should Be Matched
+                </span>
+                <span class= "Successmsg" *ngIf="f.confirmpassword.valid">Password Matched</span>
+            </div>
+          </div>
+          <div id="Regi-btn">
+            <button id="Regi-signup">SignUp</button>
+
+
+          </div>
+          <div id="Regi-footer">
+            <span (click)="BackPage()" id="Regi-tag">Already logged in ?</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,106 @@
+
+
+#Regi-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+   background-repeat: no-repeat;
+   background-image: url(https://t3.ftcdn.net/jpg/01/22/71/96/360_F_122719641_V0yw2cAOrfxsON3HeWi2Sf4iVxhv27QO.jpg);
+   background-size: cover;
+   background-position:center;
+}
+#Regi-Form{
+    display: flex;
+    flex-direction: column;
+
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(135, 207, 235, 0.575);
+
+
+    // background-color: skyblue;
+    width: 26.5rem;
+    padding: 1rem 0rem;
+    border-radius: 10px;
+
+}
+
+.form-control-sign{
+    height: 2rem;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    
+}
+.form-control-sign::placeholder{
+    text-indent: 5px;
+}
+.form-control-sign:focus{
+     text-indent: 5px;
+}
+
+#Regi-signup{
+    background-color: green;
+    color: white;
+    padding: 0.8rem 2rem;
+    margin:2rem;
+    border-radius: 5px;
+
+}
+#Regi-signup:hover{
+    background-color: rgba(0, 0, 255, 0.829);
+    
+}
+#Regi-cancel{
+    background-color: tomato;
+    color: white;
+    padding: 0.8rem;
+    margin: 2rem;
+    border-radius: 5px;
+
+
+}
+.input-group-sign input{
+    margin: 10px;
+    width: 20rem;
+    
+}
+
+#Regi-tag{
+    color: blue;
+    cursor: pointer;
+}
+.Successmsg{
+    color:green;
+    position: relative;
+    top:-0.7rem;
+    
+    font-size: 0.8rem;
+}
+.errormsg{
+    position: relative;
+    top:-0.7rem;
+    color: red;
+    font-size: 0.8rem;
+}
+#Regi-header{
+    color: white;
+    font-weight: 500;
+
+}
+.errorsGroups span{
+    margin: 5px;
+    
+}
+@media(max-width:440px){
+#Regi-Form{
+    width: auto;
+}
+.input-group input{
+    width: auto;
+}
+}

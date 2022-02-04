@@ -1,0 +1,80 @@
+#container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url(https://t3.ftcdn.net/jpg/01/22/71/96/360_F_122719641_V0yw2cAOrfxsON3HeWi2Sf4iVxhv27QO.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center;
+}
+#login-form{
+  
+  width: 21rem; 
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  background-color: rgba(135, 207, 235, 0.575);
+  border-radius: 10px;
+  outline: none;
+
+}
+.UserNotExist{
+  color: red;
+}
+.input-group-user{
+  margin-bottom: 2rem;
+
+ 
+}
+.errormsg{
+  color: red;
+  font-size: 0.8rem;
+}
+.login-btn-box{
+  text-align: center;
+
+ 
+}
+.login-btn{
+  background-color: green;
+  color: white;
+  margin-top: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem 5rem;
+  border-radius: 5px;
+}
+#sign-up-login{
+  color: blue;
+  cursor: pointer;
+}
+.login-btn:hover{
+  background-color: blue;
+
+
+}
+
+.form-control-user{
+  height: 2rem;
+  width: 20rem;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+.form-control-user::placeholder{
+  text-indent: 5px;
+  
+}
+.form-control:focus{
+  text-indent: 5px;
+}
+@media(max-width:370px){
+  #login-form{
+    width: 23rem; 
+
+  }
+}
+

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" >
+    <form action="" id="login-form" [formGroup]="Loginform" (ngSubmit)="WelComeTorus()">
+      <div>
+      <img src="https://st2.depositphotos.com/5142301/8014/v/950/depositphotos_80144464-stock-illustration-t-letter-logo-with-neon.jpg" alt="" width="50px" height="50px">  
+      </div>
+      <div class="UserNotExist">{{NotVisited}}</div>
+    
+      <div class="input-group-user ">
+      <div class="input-group-user mb-3">
+        <input type="text" class="form-control-user" placeholder="Username" formControlName="username">
+       <div><span  class='errormsg' *ngIf="loginForm.username.invalid && loginForm.username && submitted">username is required</span></div> 
+      </div>
+       <div class="input-group-user mb-3">
+        <input type="password" class="form-control-user" placeholder="password" formControlName="Loginpassword">
+        <div><span  class='errormsg' *ngIf="loginForm.Loginpassword.invalid && loginForm.Loginpassword && submitted">password is required</span></div> 
+      </div >
+      <div class="login-btn-box">
+        <button class="login-btn" >Log-in</button>
+      </div>
+      
+    </div>
+ 
+    <div><span>New User? </span><span (click)="SignUpDisplay()" id="sign-up-login">Sign-Up</span></div>
+ 
+  </form>
+  </div>
+</ion-content>
